@@ -4,9 +4,12 @@
 
 A sophisticated, responsive React-based manga reading application built as a demonstration of full-stack web development capabilities. This project integrates with the **MangaDex Public API** to provide an immersive manga reading experience with modern UI/UX patterns and advanced React techniques.
 
+## 🚀 **[Live Demo]([https://your-demo-link.com](https://myapp-production-6903.up.railway.app/)** | **[API Documentation](https://api.mangadex.org/docs/)**
+
 ![React](https://img.shields.io/badge/React-18.3.1-61DAFB?style=flat&logo=react)
 ![Material-UI](https://img.shields.io/badge/Material--UI-5.x-0081CB?style=flat&logo=mui)
 ![MangaDex API](https://img.shields.io/badge/MangaDex-API-FF6740?style=flat)
+![Live Demo](https://img.shields.io/badge/Demo-Live-brightgreen?style=flat&logo=vercel)
 
 ## 🎯 Project Purpose
 
