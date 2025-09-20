@@ -1,366 +1,290 @@
-<!-- @format -->
-
 # 📚 SAD MANGA - Modern Manga Reading Platform
 
-A sophisticated, responsive React-based manga reading application that provides an immersive and user-friendly experience for manga enthusiasts. Built with modern web technologies and featuring a beautiful, customizable interface.
+> **A practice project showcasing modern React development skills**
 
-## 🌟 Project Overview
+A sophisticated, responsive React-based manga reading application built as a demonstration of full-stack web development capabilities. This project integrates with the **MangaDex Public API** to provide an immersive manga reading experience with modern UI/UX patterns and advanced React techniques.
 
-**SAD MANGA** is a full-stack manga reading platform that allows users to browse, search, and read manga with advanced features like bookmarking, reading history, and responsive design. The application integrates with the MangaDex API to provide access to a vast library of manga content.
+![React](https://img.shields.io/badge/React-18.3.1-61DAFB?style=flat&logo=react)
+![Material-UI](https://img.shields.io/badge/Material--UI-5.x-0081CB?style=flat&logo=mui)
+![MangaDex API](https://img.shields.io/badge/MangaDex-API-FF6740?style=flat)
 
-### Key Features
+## 🎯 Project Purpose
 
--   🔍 **Advanced Search & Filtering** - Search by title, tags, status, and more
--   📖 **Immersive Reading Experience** - Multiple zoom modes and keyboard navigation
--   📱 **Responsive Design** - Optimized for desktop, tablet, and mobile devices
--   🌙 **Dark/Light Theme** - Customizable themes with smooth transitions
--   📚 **Personal Library** - Bookmark favorite manga and track reading history
--   ⚡ **Performance Optimized** - Infinite scrolling, lazy loading, and caching
--   🎨 **Modern UI/UX** - Beautiful animations and intuitive interface
+This is a **practice/showcase project** designed to demonstrate:
+- Modern React development patterns and best practices
+- Integration with third-party APIs (MangaDex Public API)
+- Responsive web design and mobile-first development
+- State management with multiple libraries
+- Performance optimization techniques
+- Modern UI/UX implementation
 
-### Target Users
+**Note**: This project is for educational and portfolio purposes, showcasing technical skills in frontend development.
 
--   Manga enthusiasts and readers
--   Web developers interested in React applications
--   Users seeking a modern, feature-rich reading platform
+## 🌟 Key Features
 
-## 🛠️ Tech Stack
+- 🔍 **Advanced Search & Filtering** - Real-time search with MangaDex API integration
+- 📖 **Immersive Reading Experience** - Multiple zoom modes and keyboard navigation
+- 📱 **Fully Responsive Design** - Optimized for desktop, tablet, and mobile
+- 🌙 **Dark/Light Theme System** - Smooth theme transitions with persistent preferences
+- 📚 **Personal Library Management** - Bookmark system and reading history tracking
+- ⚡ **Performance Optimized** - Infinite scrolling, lazy loading, and smart caching
+- 🎨 **Modern Material Design** - Beautiful animations and intuitive interface
+
+## 🛠️ Tech Stack & Skills Demonstrated
 
 ### Frontend Technologies
+- **React 18.3.1** - Modern hooks, functional components, and performance patterns
+- **Material-UI (MUI) 5.x** - Component library integration and customization
+- **React Router DOM 6.x** - Client-side routing and navigation
+- **TanStack React Query** - Advanced data fetching, caching, and synchronization
+- **Zustand** - Lightweight state management solution
+- **Framer Motion** - Complex animations and micro-interactions
+- **Axios** - HTTP client with interceptors and error handling
 
--   **React 18.3.1** - Modern React with hooks and functional components
--   **Material-UI (MUI) 7.3.1** - Comprehensive UI component library
--   **React Router DOM 7.8.2** - Client-side routing and navigation
--   **TanStack React Query 5.87.4** - Data fetching, caching, and state management
--   **Zustand 5.0.8** - Lightweight state management for client-side data
--   **Framer Motion 12.23.12** - Advanced animations and transitions
--   **Axios 1.11.0** - HTTP client for API requests
+### UI/UX & Performance Libraries
+- **Swiper** - Touch-enabled carousel implementation
+- **React Infinite Scroll** - Efficient large list virtualization
+- **React Hook Form** - Advanced form handling and validation
+- **React Window** - List virtualization for performance
+- **Intersection Observer** - Efficient scroll-based triggers
 
-### UI/UX Libraries
+### Development & Build Tools
+- **Create React App** - Modern React toolchain
+- **ESLint** - Code quality and consistency
+- **Express.js** - Simple backend server for API proxying
 
--   **Swiper 11.2.10** - Touch slider for manga galleries
--   **React Infinite Scroll Component 6.1.0** - Infinite scrolling for large lists
--   **React Hook Form 7.62.0** - Form handling and validation
--   **React Select 5.10.2** - Advanced select components
--   **React Window 1.8.11** - Virtualization for performance
--   **React Intersection Observer 9.16.0** - Intersection observer hooks
+### API Integration
+- **MangaDex Public API** - RESTful API integration with proper error handling
+- **CORS Proxy** - Backend solution for API access management
 
-### Development Tools
-
--   **React Scripts 5.0.1** - Build tooling and development server
--   **ESLint** - Code linting and quality assurance
--   **Node.js** - Runtime environment
--   **NPM** - Package management
-
-### Backend & API
-
--   **Express.js** - Backend server framework
--   **CORS** - Cross-origin resource sharing
--   **MangaDex API** - Primary data source for manga content
--   **Railway** - Deployment platform
-
-## 🚀 Setup Instructions
+## 🚀 Getting Started
 
 ### Prerequisites
-
--   Node.js (v16 or higher)
--   NPM or Yarn package manager
--   Git
+```bash
+node -v  # v16.0.0 or higher
+npm -v   # v8.0.0 or higher
+```
 
 ### Installation
 
 1. **Clone the repository**
-
-    ```bash
-    git clone <repository-url>
-    cd main-project
-    ```
+```bash
+git clone https://github.com/yourusername/sad-manga.git
+cd sad-manga
+```
 
 2. **Install dependencies**
+```bash
+# Install frontend dependencies
+npm install
 
-    ```bash
-    npm install
-    ```
+# Install backend dependencies
+cd backend
+npm install
+cd ..
+```
 
-3. **Install backend dependencies**
+3. **Start development servers**
+```bash
+# Start both frontend and backend concurrently
+npm run start
 
-    ```bash
-    cd backend
-    npm install
-    cd ..
-    ```
+# OR start them separately:
+# Terminal 1 - Backend (port 8080)
+cd backend && npm start
 
-4. **Start the development servers**
+# Terminal 2 - Frontend (port 3000)
+npm start
+```
 
-    **Option 1: Start both frontend and backend**
-
-    ```bash
-    npm run start
-    ```
-
-    **Option 2: Start separately**
-
-    ```bash
-    # Terminal 1 - Backend
-    cd backend
-    npm start
-
-    # Terminal 2 - Frontend
-    npm start
-    ```
-
-5. **Access the application**
-    - Frontend: `http://localhost:3000`
-    - Backend: `http://localhost:8080`
+4. **Open your browser**
+- Frontend: `http://localhost:3000`
+- Backend API: `http://localhost:8080`
 
 ### Production Build
-
-1. **Build the frontend**
-
-    ```bash
-    npm run build
-    ```
-
-2. **The build files will be in the `build/` directory**
-
-3. **Deploy the backend with the build files**
-    ```bash
-    cd backend
-    # The backend serves the frontend build files
-    npm start
-    ```
-
-## 📁 Folder Structure
-
-```
-main-project/
-├── public/                     # Static assets
-│   ├── index.html             # Main HTML template
-│   ├── favicon.ico            # Site icon
-│   └── manifest.json          # PWA manifest
-├── src/                       # Source code
-│   ├── api/                   # API layer
-│   │   ├── client.js          # Axios configuration
-│   │   └── mangaApi.js        # Manga API functions
-│   ├── common/                # Shared components
-│   │   ├── AppNavBar/         # Navigation components
-│   │   │   ├── AppNavBar.js   # Main navigation
-│   │   │   ├── SearchBar/     # Search functionality
-│   │   │   └── SideBar/       # Sidebar components
-│   │   ├── Appfooter/         # Footer components
-│   │   ├── ScrollToTop.js     # Scroll utilities
-│   │   └── Tooltip.js         # Custom tooltip component
-│   ├── hooks/                 # Custom React hooks
-│   │   └── useManga.js        # Manga data hooks
-│   ├── Pages/                 # Page components
-│   │   ├── MainPage/          # Home page components
-│   │   │   ├── HomePage.js    # Main landing page
-│   │   │   ├── latest/        # Latest manga section
-│   │   │   └── Popular/       # Popular manga section
-│   │   ├── InfoPage/          # Manga details page
-│   │   ├── ReaderPage/        # Manga reading page
-│   │   ├── AdvancedSearch/    # Search and filter page
-│   │   └── NotFoundPage.js    # 404 error page
-│   ├── Store/                 # State management
-│   │   ├── BookmarkStore.js   # Bookmark state
-│   │   ├── ReadStore.js       # Reading history state
-│   │   ├── SearchStore.js     # Search history state
-│   │   └── ThemeStore.js      # Theme state
-│   ├── theme/                 # Theme configuration
-│   │   └── theme.js           # MUI theme setup
-│   ├── logos/                 # Logo assets
-│   ├── App.js                 # Main app component
-│   ├── index.js               # App entry point
-│   └── index.css              # Global styles
-├── backend/                   # Backend server
-│   ├── server.js              # Express server
-│   └── package.json           # Backend dependencies
-├── build/                     # Production build files
-├── package.json               # Frontend dependencies
-└── README.md                  # This file
+```bash
+npm run build
+cd backend && npm start  # Serves built files
 ```
 
-## 🎯 Features & Functionality
+## 📁 Project Architecture
 
-### 🔍 Search & Discovery
+```
+sad-manga/
+├── 📁 public/                 # Static assets
+├── 📁 src/
+│   ├── 📁 api/               # API layer & MangaDex integration
+│   ├── 📁 common/            # Reusable UI components
+│   ├── 📁 hooks/             # Custom React hooks
+│   ├── 📁 Pages/             # Route components
+│   ├── 📁 Store/             # State management (Zustand)
+│   ├── 📁 theme/             # Material-UI theme configuration
+│   └── 📄 App.js             # Main application component
+├── 📁 backend/               # Express.js server
+└── 📄 package.json
+```
 
--   **Live Search**: Real-time search with debounced input
--   **Advanced Filtering**: Filter by tags, status, and sort options
--   **Search History**: Track and manage previous searches
--   **Infinite Scroll**: Seamless loading of search results
+## 🎨 Features Showcase
 
-### 📖 Reading Experience
+### 🔍 Smart Search System
+- Debounced search input for performance
+- Advanced filtering with multiple parameters
+- Search history with persistent storage
+- Real-time results with loading states
 
--   **Multiple Zoom Modes**: Fit width, fit height, and original size
--   **Keyboard Navigation**: Arrow keys for chapter navigation
--   **Page Controls**: Previous/next chapter buttons
--   **Reading Progress**: Visual indicators and progress tracking
--   **Responsive Images**: Optimized image loading with different sizes
+### 📖 Enhanced Reading Experience
+- Multiple zoom modes (fit width, fit height, original)
+- Keyboard navigation (arrow keys, shortcuts)
+- Touch gestures for mobile devices
+- Chapter progress tracking and bookmarking
 
-### 📚 Personal Library
+### 📱 Responsive Design Patterns
+- Mobile-first development approach
+- Adaptive layouts for different screen sizes
+- Touch-optimized controls and gestures
+- Progressive Web App capabilities
 
--   **Bookmarking System**: Save favorite manga for quick access
--   **Reading History**: Track read chapters with timestamps
--   **Searchable Library**: Find bookmarked manga quickly
--   **Persistent Storage**: Data saved in browser localStorage
+### 🎯 State Management
+- **Zustand**: Lightweight state for UI preferences
+- **React Query**: Server state caching and synchronization
+- **Local Storage**: Persistent user data (bookmarks, history)
+- **Context API**: Theme and global settings
 
-### 🎨 User Interface
+## 🔧 Technical Highlights
 
--   **Dark/Light Themes**: Toggle between themes with smooth transitions
--   **Responsive Design**: Optimized for all screen sizes
--   **Modern Animations**: Smooth transitions and micro-interactions
--   **Accessibility**: ARIA labels and keyboard navigation support
+### Performance Optimizations
+- **Code Splitting**: Route-based lazy loading
+- **Image Optimization**: Progressive loading with fallbacks
+- **Virtual Scrolling**: Efficient rendering of large lists
+- **Memoization**: React.memo and useMemo for expensive operations
+- **Debounced Inputs**: Reduced API calls on user input
 
-### 📱 Mobile Features
+### Modern React Patterns
+- **Custom Hooks**: Reusable logic abstraction
+- **Compound Components**: Flexible component composition
+- **Error Boundaries**: Graceful error handling
+- **Suspense**: Loading state management
+- **Portal Usage**: Modal and tooltip implementations
 
--   **Touch Gestures**: Swipe navigation for mobile devices
--   **Responsive Sidebars**: Collapsible navigation for small screens
--   **Mobile-Optimized UI**: Touch-friendly buttons and controls
--   **Progressive Web App**: Installable on mobile devices
+### API Integration Best Practices
+- **Axios Interceptors**: Centralized request/response handling
+- **Error Handling**: User-friendly error messages
+- **Loading States**: Comprehensive loading indicators
+- **Cache Management**: Smart data caching with React Query
+- **Rate Limiting**: Respectful API usage patterns
 
-## 🎮 Usage Instructions
+## 🌐 MangaDex API Integration
 
-### Navigation
+This project demonstrates proper integration with the **MangaDex Public API**:
 
-1. **Home Page**: Browse popular and latest manga
-2. **Search**: Use the search bar for quick title searches
-3. **Advanced Search**: Access `/tags` for detailed filtering
-4. **Library**: Click the library button to access bookmarks
-5. **History**: View reading history in the sidebar
+- **Endpoint Usage**: Manga search, chapter retrieval, and image serving
+- **Authentication**: Proper handling of API authentication (when required)
+- **Rate Limiting**: Respectful API usage with request throttling
+- **Error Handling**: Comprehensive error states and user feedback
+- **Data Transformation**: Clean data mapping from API responses
 
-### Reading Manga
+### Example API Integration
+```javascript
+// Demonstrates clean API abstraction
+const searchManga = async (query, filters) => {
+  const response = await apiClient.get('/manga', {
+    params: { title: query, ...filters }
+  });
+  return transformMangaData(response.data);
+};
+```
 
-1. **Select Manga**: Click on any manga card to view details
-2. **Choose Chapter**: Select a chapter from the chapter list
-3. **Reading Controls**:
-    - Use arrow keys or buttons to navigate chapters
-    - Adjust zoom mode from the dropdown
-    - Use scroll to navigate pages
-4. **Bookmark**: Click the bookmark icon to save manga
+## 📱 Mobile-First Development
 
-### Mobile Usage
+- **Responsive Breakpoints**: Custom Material-UI theme breakpoints
+- **Touch Gestures**: Swiper integration for mobile navigation
+- **Performance**: Optimized for mobile network conditions
+- **Accessibility**: ARIA labels and keyboard navigation support
+- **PWA Features**: Manifest and service worker ready
 
-1. **Touch Navigation**: Swipe left/right to navigate chapters
-2. **Sidebar Access**: Tap the menu icon for navigation options
-3. **Search**: Use the mobile-optimized search interface
-4. **Reading**: Pinch to zoom or use zoom controls
+## 🎨 UI/UX Showcase
 
-### Customization
+### Theme System
+- **Dynamic Theming**: Runtime theme switching
+- **Color Palette**: Consistent design system
+- **Typography Scale**: Responsive text sizing
+- **Component Variants**: Custom Material-UI component styles
 
-1. **Theme Toggle**: Click the theme button in the navigation
-2. **Zoom Preferences**: Choose your preferred reading zoom mode
-3. **Search Filters**: Customize search results with advanced filters
+### Animation & Interactions
+- **Page Transitions**: Smooth route transitions with Framer Motion
+- **Micro-interactions**: Hover effects and button animations
+- **Loading States**: Skeleton screens and progressive loading
+- **Gesture Support**: Touch-friendly interactions
 
-## ⚙️ Customization Options
+## 📊 Skills Demonstrated
 
-### Theme Customization
+### Frontend Development
+- ✅ Modern React development (Hooks, Context, Suspense)
+- ✅ Component architecture and reusability
+- ✅ State management with multiple solutions
+- ✅ Performance optimization techniques
+- ✅ Responsive web design principles
+- ✅ Accessibility best practices
 
-The application supports extensive theme customization through the `src/theme/theme.js` file:
+### API & Backend Integration
+- ✅ RESTful API integration and error handling
+- ✅ Asynchronous JavaScript and Promise handling
+- ✅ Backend proxy server with Express.js
+- ✅ CORS handling and security considerations
 
--   **Color Schemes**: Modify primary, secondary, and accent colors
--   **Typography**: Customize fonts and text styles
--   **Component Styling**: Override MUI component styles
--   **Dark/Light Modes**: Separate configurations for each theme
+### Modern Web Technologies
+- ✅ ES6+ JavaScript features and patterns
+- ✅ Module bundling and build optimization
+- ✅ Progressive Web App concepts
+- ✅ Browser APIs (Intersection Observer, Local Storage)
 
-### Layout Options
+### Development Practices
+- ✅ Component-driven development
+- ✅ Code organization and file structure
+- ✅ Git version control and commit practices
+- ✅ Documentation and README creation
 
--   **Sidebar Behavior**: Configure sidebar width and behavior
--   **Navigation Layout**: Customize navigation bar appearance
--   **Grid Layouts**: Adjust manga card grid configurations
--   **Responsive Breakpoints**: Modify responsive behavior
+## 🚧 Future Enhancements
 
-### Reading Preferences
-
--   **Default Zoom Mode**: Set initial zoom preference
--   **Page Loading**: Configure image loading strategies
--   **Keyboard Shortcuts**: Customize keyboard navigation
--   **Animation Settings**: Adjust transition speeds and effects
-
-## 🐛 Known Issues & TODOs
-
-### Current Limitations
-
--   **API Rate Limiting**: MangaDex API has rate limits that may affect performance
--   **Image Caching**: Limited image caching may cause slower loading
--   **Offline Support**: No offline reading capability
--   **User Accounts**: No user authentication system
-
-### Planned Improvements
-
--   [ ] **PWA Features**: Add offline support and push notifications
--   [ ] **User Authentication**: Implement user accounts and cloud sync
--   [ ] **Advanced Caching**: Implement service worker for better caching
--   [ ] **Reading Modes**: Add more reading modes (vertical scroll, etc.)
--   [ ] **Social Features**: Add comments and ratings system
--   [ ] **Performance**: Optimize bundle size and loading times
--   [ ] **Accessibility**: Improve screen reader support
--   [ ] **Internationalization**: Add multi-language support
-
-### Technical Debt
-
--   [ ] **Error Handling**: Improve error boundaries and user feedback
--   [ ] **Testing**: Add comprehensive test coverage
--   [ ] **Documentation**: Add JSDoc comments for better code documentation
--   [ ] **TypeScript**: Consider migrating to TypeScript for better type safety
+- [ ] **TypeScript Migration** - Type safety and better DX
+- [ ] **Testing Suite** - Unit and integration tests
+- [ ] **PWA Features** - Offline support and push notifications
+- [ ] **Internationalization** - Multi-language support
+- [ ] **User Authentication** - Account system integration
+- [ ] **Advanced Caching** - Service worker implementation
 
 ## 🤝 Contributing
 
-We welcome contributions to improve SAD MANGA! Here's how you can help:
+This being a practice project, contributions and feedback are welcome! Feel free to:
+- Report bugs or suggest improvements
+- Fork and create your own version
+- Use this as a reference for your own projects
+- Provide feedback on code structure and patterns
 
-### Getting Started
+## 📄 License & Disclaimer
 
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/amazing-feature`
-3. Make your changes and test thoroughly
-4. Commit your changes: `git commit -m 'Add amazing feature'`
-5. Push to the branch: `git push origin feature/amazing-feature`
-6. Open a Pull Request
+**MIT License** - This project is open source and available for educational purposes.
 
-### Contribution Guidelines
+**Disclaimer**: This is a practice project created for skill demonstration. All manga content is sourced from the MangaDex Public API. This project is not affiliated with MangaDex and is created solely for educational and portfolio purposes.
 
--   **Code Style**: Follow the existing code style and ESLint rules
--   **Testing**: Test your changes on multiple devices and browsers
--   **Documentation**: Update documentation for new features
--   **Performance**: Ensure changes don't negatively impact performance
--   **Accessibility**: Maintain accessibility standards
+## 👤 About the Developer
 
-### Areas for Contribution
+**Marwan Atef** - Frontend Developer
 
--   **Bug Fixes**: Report and fix bugs
--   **New Features**: Add new functionality
--   **UI/UX Improvements**: Enhance the user experience
--   **Performance**: Optimize loading and rendering
--   **Documentation**: Improve code and user documentation
--   **Testing**: Add tests for better reliability
+This project showcases my skills in modern web development, particularly:
+- React ecosystem mastery
+- API integration and state management
+- Responsive design and performance optimization
+- Modern development tools and practices
 
-## 📄 License & Credits
-
-### License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-### Credits
-
--   **MangaDex API**: For providing the manga data and content
--   **Material-UI**: For the comprehensive UI component library
--   **React Community**: For the amazing React ecosystem
--   **Open Source Contributors**: For the various libraries and tools used
-
-### Acknowledgments
-
--   Special thanks to the MangaDex team for providing free access to their API
--   Thanks to all the open-source contributors whose work made this project possible
--   Appreciation to the React and Material-UI communities for excellent documentation and support
-
-### Creator
-
-**Marwan Atef** - Front-end Developer
-
--   GitHub: [@Marwanatef96](https://github.com/Marwanatef96)
--   LinkedIn: [Marwan Atef](https://www.linkedin.com/in/marwan-atef-dev/)
--   Twitter: [@MarwanAtef10](https://x.com/MarwanAtef10)
--   Email: marwanatef54@gmail.com
+**Connect with me:**
+- 🌐 **GitHub**: [@Marwanatef96](https://github.com/Marwanatef96)
+- 💼 **LinkedIn**: [Marwan Atef](https://www.linkedin.com/in/marwan-atef-dev/)
+- 🐦 **Twitter**: [@MarwanAtef10](https://x.com/MarwanAtef10)
+- 📧 **Email**: marwanatef54@gmail.com
 
 ---
 
-**Made with ❤️ to showcase modern web development skills and create an amazing manga reading experience.**
+⭐ **If you found this project helpful or interesting, please consider giving it a star!**
+
+*Built with ❤️ to showcase modern React development skills and demonstrate integration with public APIs.*
