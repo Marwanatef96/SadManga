@@ -1,0 +1,24 @@
+{
+  "version": "0.2.0",
+  "compounds": [
+    {
+      "name": "Run Backend + Frontend",
+      "configurations": ["Backend", "Frontend"]
+    }
+  ],
+  "configurations": [
+    {
+      "name": "Backend",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/backend/server.js"
+    },
+    {
+      "name": "Frontend",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm start",
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}

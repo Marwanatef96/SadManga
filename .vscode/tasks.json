@@ -1,0 +1,26 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run backend server",
+            "type": "shell",
+            "command": "node backend/server.js",
+            "problemMatcher": []
+        },
+        {
+            "label": "Run frontend",
+            "type": "shell",
+            "command": "npm start",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Run both",
+            "dependsOn": ["Run backend server", "Run frontend"],
+            "dependsOrder": "parallel",
+            "problemMatcher": []
+        }
+    ]
+}
