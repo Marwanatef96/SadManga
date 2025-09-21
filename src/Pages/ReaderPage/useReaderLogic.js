@@ -86,8 +86,7 @@ const useReaderLogic = () => {
 
             setPages(
                 data.map(
-                    (page) =>
-                        `https://myapp-production-6903.up.railway.app/api/page/${id}/${page}`
+                    (page) => `http://localhost:8080/api/page/${id}/${page}`
                 )
             );
         } else {

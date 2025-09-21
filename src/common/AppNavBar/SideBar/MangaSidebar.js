@@ -466,7 +466,10 @@ const MangaSidebar = () => {
                                                                 mr: 2,
                                                             }}>
                                                             <GradientChip
-                                                                label={`#${chapter.number}`}
+                                                                label={`#${
+                                                                    chapter.number ||
+                                                                    "1"
+                                                                }`}
                                                                 size='small'
                                                             />
                                                         </ListItemAvatar>
@@ -495,9 +498,10 @@ const MangaSidebar = () => {
                                                                         fontSize:
                                                                             "11px",
                                                                     }}>
-                                                                    {
-                                                                        chapter.title
-                                                                    }
+                                                                    {chapter.title ===
+                                                                        "Chapter null"
+                                                                        ? "OneShot"
+                                                                        : chapter.title}
                                                                 </Typography>
                                                             }
                                                         />

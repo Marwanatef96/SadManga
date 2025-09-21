@@ -1,7 +1,7 @@
 /** @format */
 import apiClient from "./client";
 
-const BASE_URL = "https://myapp-production-6903.up.railway.app";
+const BASE_URL = "http://localhost:8080";
 const DEFAULT_CONTENT_RATING = ["safe"];
 const DEFAULT_LANGUAGE = ["en"];
 const EXCLUDED_TAGS = [

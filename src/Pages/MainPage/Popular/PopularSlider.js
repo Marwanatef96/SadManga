@@ -74,11 +74,8 @@ export default function PopularSlider({ popularManga, onCardHover }) {
                 }}
                 loop={popularManga.length > 8}
                 spaceBetween={20}
-                slidesPerView={
-                    popularManga.length < 8 ? popularManga.length : 8
-                }
+                slidesPerView={1}
                 breakpoints={{
-                    1: { slidesPerView: 1 },
                     640: { slidesPerView: 3 },
                     960: { slidesPerView: 5 },
                     1280: { slidesPerView: 8 },

@@ -22,6 +22,7 @@ const ChapterControls = ({
     handleZoomChange = () => {},
     handlePrevChapter = () => {},
     handleNextChapter = () => {},
+    minimalMode=false,
 }) => {
     const navigate = useNavigate();
     const theme = useTheme();
@@ -32,7 +33,6 @@ const ChapterControls = ({
     const isFirstChapter = currentIndex === chapters.length - 1;
     const isLastChapter = currentIndex === 0;
     const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
-    const minimalMode = !chapterData;
 
     return (
         <Box

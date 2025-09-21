@@ -59,8 +59,13 @@ function ReaderPage() {
                         />
                         <PageViewer pages={pages} zoomMode={zoomMode} />
                         <ChapterControls
+                            chapters={chapters}
+                            chapterData={chapterData}
+                            mangaTitle={mangaTitle}
+                            zoomMode={zoomMode}
                             handlePrevChapter={handlePrevChapter}
                             handleNextChapter={handleNextChapter}
+                            minimalMode={true}
                         />
                     </Stack>
                 )}
