@@ -88,7 +88,7 @@ const useReaderLogic = () => {
             setPages(
                 data.map(
                     (pageData) =>
-                        `http://localhost:8080/api/page?baseUrl=${encodeURIComponent(
+                        `https://sadmanga-production.up.railway.app/api/page?baseUrl=${encodeURIComponent(
                             baseUrl
                         )}&hash=${hash}&pageData=${pageData}`
                 )

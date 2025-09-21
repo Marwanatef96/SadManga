@@ -114,7 +114,7 @@ npm start
 4. **Open your browser**
 
 -   Frontend: `http://localhost:3000`
--   Backend API: `http://localhost:8080`
+-   Backend API: `https://sadmanga-production.up.railway.app`
 
 ### Production Build
 

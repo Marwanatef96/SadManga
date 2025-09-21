@@ -153,7 +153,7 @@ app.get("/api/page", async (req, res) => {
         }
 
         // Build the complete image URL
-        const imageUrl = `${baseUrl}/data-saver${hash}/${pageData}`;
+        const imageUrl = `${baseUrl}/data-saver/${hash}/${pageData}`;
 
         console.log(`Method 2 - Fetching: ${imageUrl}`);
 
@@ -177,7 +177,7 @@ app.get("/api/page", async (req, res) => {
         console.error(`Method 2 Error:`, error.message);
         res.status(error.response?.status || 500).json({
             error: error.message,
-            requestedUrl: `${req.query.baseUrl}/data-saver${req.query.hash}/${req.query.pageData}`,
+            requestedUrl: `${req.query.baseUrl}/data/${req.query.hash}/${req.query.pageData}`,
         });
     }
 });
@@ -194,7 +194,7 @@ app.get("/api/page/:chapterId/:fileName", async (req, res) => {
         const hash = data.chapter.hash;
 
         // Build the image URL
-        const imageUrl = `${baseUrl}/data-saver${hash}/${fileName}`;
+        const imageUrl = `${baseUrl}/data-saver/${hash}/${fileName}`;
 
         // Fetch and return the image
         const response = await axios.get(imageUrl, {
