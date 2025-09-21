@@ -58,8 +58,12 @@ export default function AppNavBar({ props }) {
     const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
 
-    const handleMenuOpen = (event) => {
-        setAnchorEl(event.currentTarget);
+    const handleMenuToggle = (event) => {
+        if (anchorEl) {
+            setAnchorEl(null); // close if already open
+        } else {
+            setAnchorEl(event.currentTarget); // open if closed
+        }
     };
 
     const handleMenuClose = () => {
@@ -78,6 +82,7 @@ export default function AppNavBar({ props }) {
                     }}>
                     <Toolbar sx={{ minHeight: "64px" }}>
                         <Button
+                            onClick={handleMenuClose}
                             component={Link}
                             to='/Home'
                             style={{
@@ -109,6 +114,7 @@ export default function AppNavBar({ props }) {
 
                         {/* Library Button */}
                         <PremiumTooltip
+                            onClick={handleMenuClose}
                             title='Library'
                             animation='connected'
                             disableHoverListener={!isMobile}
@@ -125,7 +131,10 @@ export default function AppNavBar({ props }) {
                         </PremiumTooltip>
 
                         {/* Theme Switch */}
-                        <PremiumTooltip title='Theme' animation='connected'>
+                        <PremiumTooltip
+                            onClick={handleMenuClose}
+                            title='Theme'
+                            animation='connected'>
                             <IconButton
                                 color='inherit'
                                 sx={{ ml: 1.5 }}
@@ -147,14 +156,15 @@ export default function AppNavBar({ props }) {
                             <>
                                 <IconButton
                                     color='inherit'
-                                    onClick={handleMenuOpen}>
+                                    onClick={handleMenuToggle}>
                                     <MenuIcon />
                                 </IconButton>
                                 <Menu
                                     anchorEl={anchorEl}
                                     open={open}
                                     onClose={handleMenuClose}
-                                    sx={{ zIndex: 1 }}>
+                                    onClick={handleMenuClose}
+                                    sx={{ zIndex: 400 }}>
                                     <Box
                                         sx={{
                                             display: "flex",
@@ -177,6 +187,7 @@ export default function AppNavBar({ props }) {
 
                         {/* Sidebars + Search on Different Sizes */}
                         <Box
+                            onClick={handleMenuClose}
                             sx={{
                                 display: "flex",
                                 alignItems: "center",
