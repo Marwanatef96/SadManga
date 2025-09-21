@@ -83,12 +83,12 @@ const useReaderLogic = () => {
         if (!chapter?.attributes?.externalUrl && atHome) {
             const baseUrl = atHome.baseUrl;
             const hash = atHome.chapter.hash;
-            const data = atHome.chapter.data;
+            const data = atHome.chapter.dataSaver;
 
             setPages(
                 data.map(
                     (pageData) =>
-                        `https://sadmanga-production.up.railway.app/api/page?baseUrl=${encodeURIComponent(
+                        `http://localhost:8080/api/page?baseUrl=${encodeURIComponent(
                             baseUrl
                         )}&hash=${hash}&pageData=${pageData}`
                 )

@@ -153,7 +153,7 @@ app.get("/api/page", async (req, res) => {
         }
 
         // Build the complete image URL
-        const imageUrl = `${baseUrl}/data/${hash}/${pageData}`;
+        const imageUrl = `${baseUrl}/data-saver/${hash}/${pageData}`;
 
         console.log(`Method 2 - Fetching: ${imageUrl}`);
 
@@ -194,7 +194,7 @@ app.get("/api/page/:chapterId/:fileName", async (req, res) => {
         const hash = data.chapter.hash;
 
         // Build the image URL
-        const imageUrl = `${baseUrl}/data/${hash}/${fileName}`;
+        const imageUrl = `${baseUrl}/data-saver/${hash}/${fileName}`;
 
         // Fetch and return the image
         const response = await axios.get(imageUrl, {
