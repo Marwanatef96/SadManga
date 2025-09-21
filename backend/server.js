@@ -136,7 +136,7 @@ app.get("/api/manga", async (req, res) => {
     }
 });
 
-app.get("/page", async (req, res) => {
+app.get("/api/page", async (req, res) => {
     try {
         const { baseUrl, hash, pageData } = req.query;
 

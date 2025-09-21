@@ -1,7 +1,7 @@
 /** @format */
 import apiClient from "./client";
 
-const BASE_URL = "http://localhost:8080";
+const BASE_URL = "https://sadmanga-production.up.railway.app";
 const DEFAULT_CONTENT_RATING = ["safe"];
 const DEFAULT_LANGUAGE = ["en"];
 const EXCLUDED_TAGS = [
