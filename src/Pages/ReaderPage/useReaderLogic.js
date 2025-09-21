@@ -81,12 +81,16 @@ const useReaderLogic = () => {
         if (!chapter) return setLoading(false);
 
         if (!chapter?.attributes?.externalUrl && atHome) {
+            const baseUrl = atHome.baseUrl;
+            const hash = atHome.chapter.hash;
             const data = atHome.chapter.data;
-            const id = chapter.id;
 
             setPages(
                 data.map(
-                    (page) => `http://localhost:8080/api/page/${id}/${page}`
+                    (pageData) =>
+                        `http://localhost:8080/page?baseUrl=${encodeURIComponent(
+                            baseUrl
+                        )}&hash=${hash}&pageData=${pageData}`
                 )
             );
         } else {

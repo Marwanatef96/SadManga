@@ -136,18 +136,48 @@ app.get("/api/manga", async (req, res) => {
     }
 });
 
-app.get("/cover/:mangaId/:fileName", async (req, res) => {
-    const { mangaId, fileName } = req.params;
+app.get("/page", async (req, res) => {
     try {
-        const response = await axios.get(
-            `https://uploads.mangadex.org/covers/${mangaId}/${fileName}`,
-            { responseType: "arraybuffer" }
+        const { baseUrl, hash, pageData } = req.query;
+
+        if (!baseUrl || !hash || !pageData) {
+            return res.status(400).json({
+                error: "Missing required parameters",
+                required: ["baseUrl", "hash", "pageData"],
+                received: {
+                    baseUrl: !!baseUrl,
+                    hash: !!hash,
+                    pageData: !!pageData,
+                },
+            });
+        }
+
+        // Build the complete image URL
+        const imageUrl = `${baseUrl}/data/${hash}/${pageData}`;
+
+        console.log(`Method 2 - Fetching: ${imageUrl}`);
+
+        const response = await axios.get(imageUrl, {
+            responseType: "arraybuffer",
+            timeout: 30000,
+            headers: {
+                "User-Agent":
+                    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+                Referer: "https://mangadex.org/",
+                Accept: "image/webp,image/apng,image/*,*/*;q=0.8",
+            },
+        });
+
+        res.set(
+            "Content-Type",
+            response.headers["content-type"] || "image/jpeg"
         );
-        res.set("Content-Type", response.headers["content-type"]);
         res.send(response.data);
     } catch (error) {
+        console.error(`Method 2 Error:`, error.message);
         res.status(error.response?.status || 500).json({
-            message: error.message,
+            error: error.message,
+            requestedUrl: `${req.query.baseUrl}/data/${req.query.hash}/${req.query.pageData}`,
         });
     }
 });
