@@ -661,7 +661,7 @@
                                     a = A.chapter.data;
                                 o(
                                     a.map((a) =>
-                                        "https://sadmanga-production.up.railway.app/page?baseUrl="
+                                        "https://sadmanga-production.up.railway.app/api/page?baseUrl="
                                             .concat(
                                                 encodeURIComponent(e),
                                                 "&hash="
