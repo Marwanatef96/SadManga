@@ -207,6 +207,21 @@ app.get("/api/page/:chapterId/:fileName", async (req, res) => {
         res.status(500).json({ error: err.message });
     }
 });
+app.get("/cover/:mangaId/:fileName", async (req, res) => {
+    const { mangaId, fileName } = req.params;
+    try {
+        const response = await axios.get(
+            `https://uploads.mangadex.org/covers/${mangaId}/${fileName}`,
+            { responseType: "arraybuffer" }
+        );
+        res.set("Content-Type", "image/jpeg");
+        res.send(response.data);
+    } catch (error) {
+        res.status(error.response?.status || 500).json({
+            message: error.message,
+        });
+    }
+});
 
 // --- Serve frontend ---
 const buildPath = path.join(__dirname, "build");
